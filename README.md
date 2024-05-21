@@ -2,7 +2,7 @@
 ![Logo](https://example.example/example.png)
 
 
-# Project Title
+# Transcriptor
 
 Transcript Youtube videos and your own video/audio files.
 
