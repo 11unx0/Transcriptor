@@ -1,5 +1,5 @@
 
-![Logo](https://example.example/example.png)
+![Logo](https://github.com/11unx0/Transcriptor/blob/main/img/demo.png)
 
 
 # Transcriptor
