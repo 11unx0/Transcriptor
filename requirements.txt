@@ -1,0 +1,3 @@
+whisper
+pytube
+gradio
