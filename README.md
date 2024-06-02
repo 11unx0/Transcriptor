@@ -4,28 +4,52 @@
 
 # Transcriptor
 
-Transcript Youtube videos and your own video/audio files.
+Transcript Youtube videos and your own video/audio files. Uses Whisper.
 
+Developer: https://github.com/11unx0
 
 ## Installation
 
 Install modules with python pip
 
 ```bash
-cd Transcriptor/
+git clone https://github.com/11unx0/Transcriptor
+cd /Transcriptor
 pip install -r requirements.txt
 ```
     
 ## Usage/Examples
 
-```bash
-python3 main.py
-```
-You can change this line for another models of whisper.
+You can change device with --device and also for model change use --model.
 
-```python
-whisper_model = whisper.load_model("medium")
+Default device is cpu and default model is medium.
+
+```bash
+python3 main.py --device < cpu | cuda > --model < model >
 ```
+
+Example run with cpu & large-v3 model.
+
+```bash
+python3 main.py --device cpu --model large-v3
+```
+
+```bash
+python3 main.py --help
+
+usage: main.py [-h] [--device {cpu,cuda}] [--model {tiny,base,small,medium,large,large-v2,large-v3}]
+
+Transcript Youtube videos and your own video/audio files. Uses Whisper. Developer: https://github.com/11unx0
+
+options:
+  -h, --help            show this help message and exit
+  --device {cpu,cuda}   Device to run Whisper model on. Choices are "cpu" or "cuda". Default is "cpu".
+  --model {tiny,base,small,medium,large,large-v2,large-v3}
+                        Choose a model for Whisper. Default is "medium". More details for models: 
+                        https://github.com/11unx0/Transcriptor
+```
+
+## Whisper models.
 
 | Size     | Parameters | English-only                                         | Multilingual                                        |
 |----------|------------|------------------------------------------------------|-----------------------------------------------------|
