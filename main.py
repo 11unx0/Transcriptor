@@ -1,10 +1,17 @@
+import argparse
 import whisper
 from pytube import YouTube
 import gradio as gr
 
+# parameters
+parser = argparse.ArgumentParser(description='Transcript Youtube videos and your own video/audio files. Uses Whisper. Developer: https://github.com/11unx0')
+parser.add_argument('--device', type=str, choices=['cpu', 'cuda'], default='cpu', help='Device to run Whisper model on. Choices are "cpu" or "cuda". Default is "cpu".')
+parser.add_argument('--model', type=str, choices=['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3'], default='medium', help='Choose a model for Whisper. Default is "medium". More details for models: https://github.com/11unx0/Transcriptor')
+args = parser.parse_args()
+
 # Whisper model load.
 #whisper_model = whisper.load_model("base")
-whisper_model = whisper.load_model("medium") # tiny - base - small - medium - large - large-v2 - large-v3
+whisper_model = whisper.load_model(args.model, args.device) # tiny - base - small - medium - large - large-v2 - large-v3
 
 # Size 	Parameters 	English-only 	Multilingual
 # tiny 	    39 M 	    yes 	        yes
@@ -41,7 +48,7 @@ iface = gr.Interface(
     fn=transcribe,
     inputs=[input_text_url, input_file],  # Both input types
     outputs="text",
-    title="Transcription Tool",
+    title="11unx0's Transcriptor. Uses Whisper models by OpenAI.",
     description="Enter a YouTube video URL or upload an audio file to transcribe it.",
 )
 
