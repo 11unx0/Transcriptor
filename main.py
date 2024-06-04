@@ -1,3 +1,6 @@
+## author:   11unx0 (https://github.com/11unx0)
+## project: https://github.com/11unx0/Transcriptor
+
 import argparse
 import whisper
 from pytube import YouTube
@@ -41,15 +44,15 @@ def transcribe(input_data, file_data=None):
     else:
         return "Please enter a YouTube URL or upload an audio file."
 
-input_text_url = gr.inputs.Textbox(label='YouTube URL', placeholder='Enter YouTube video URL or upload audio file')
-input_file = gr.inputs.File(label="Upload Audio File")
+input_text_url = gr.Textbox(label='YouTube URL', placeholder='Enter YouTube video URL or upload audio file')
+input_file = gr.File(label="Upload Audio File")
 
 iface = gr.Interface(
     fn=transcribe,
     inputs=[input_text_url, input_file],  # Both input types
     outputs="text",
-    title="11unx0's Transcriptor. Uses Whisper models by OpenAI.",
-    description="Enter a YouTube video URL or upload an audio file to transcribe it.",
+    title="11unx0's Transcriptor.",
+    description="Enter a YouTube video URL or upload an audio file to transcribe it.\n Uses Whisper models by OpenAI.",
 )
 
 iface.launch()
