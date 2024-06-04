@@ -53,11 +53,13 @@ options:
 
 |  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
 |:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
-|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
-|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
-| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
-| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
-| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
+|  tiny  |    39 M    |     `tiny.en`      |       [tiny](https://huggingface.co/openai/whisper-small)      |     ~1 GB     |      ~32x      |
+|  base  |    74 M    |     `base.en`      |       [base](https://huggingface.co/openai/whisper-base)      |     ~1 GB     |      ~16x      |
+| small  |   244 M    |     `small.en`     |      [small](https://huggingface.co/openai/whisper-small)      |     ~2 GB     |      ~6x       |
+| medium |   769 M    |    `medium.en`     |      [medium](https://huggingface.co/openai/whisper-medium)     |     ~5 GB     |      ~2x       |
+| large  |   1550 M   |        N/A         |      [large](https://huggingface.co/openai/whisper-large)      |    ~10 GB     |       1x       |
+| large-v2 | 1550 M   | N/A                  | [large-v2](https://huggingface.co/openai/whisper-large-v2) |
+| large-v3 | 1550 M   | N/A                  | [large-v3](https://huggingface.co/openai/whisper-large-v3) |
 
 ## Disclaimer
 
