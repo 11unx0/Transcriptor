@@ -14,7 +14,7 @@ Install modules with python pip
 
 ```bash
 git clone https://github.com/11unx0/Transcriptor
-cd /Transcriptor
+cd Transcriptor/
 pip install -r requirements.txt
 ```
     
