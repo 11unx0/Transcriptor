@@ -51,15 +51,13 @@ options:
 
 ## Whisper models.
 
-| Size     | Parameters | English-only                                         | Multilingual                                        |
-|----------|------------|------------------------------------------------------|-----------------------------------------------------|
-| tiny     | 39 M       | [✓](https://huggingface.co/openai/whisper-tiny.en)   | [✓](https://huggingface.co/openai/whisper-tiny)     |
-| base     | 74 M       | [✓](https://huggingface.co/openai/whisper-base.en)   | [✓](https://huggingface.co/openai/whisper-base)     |
-| small    | 244 M      | [✓](https://huggingface.co/openai/whisper-small.en)  | [✓](https://huggingface.co/openai/whisper-small)    |
-| medium   | 769 M      | [✓](https://huggingface.co/openai/whisper-medium.en) | [✓](https://huggingface.co/openai/whisper-medium)   |
-| large    | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large)    |
-| large-v2 | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large-v2) |
-| large-v3 | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large-v3) |
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
+|:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
+|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
+|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
+| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
+| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
+| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
 ## Disclaimer
 
