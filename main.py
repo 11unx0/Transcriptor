@@ -16,14 +16,15 @@ args = parser.parse_args()
 #whisper_model = whisper.load_model("base")
 whisper_model = whisper.load_model(args.model, args.device) # tiny - base - small - medium - large - large-v2 - large-v3
 
-# Size 	Parameters 	English-only 	Multilingual
-# tiny 	    39 M 	    yes 	        yes
-# base 	    74 M 	    yes 	        yes
-# small	    244 M 	    yes 	        yes
-# medium 	769 M 	    yes 	        yes
-# large	    1550 M 	    x 	            yes
-# large-v2 	1550 M 	    x 	            yes
-# large-v3 	1550 M 	    x 	            yes
+#|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
+#|:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
+#|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
+#|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
+#| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
+#| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
+#| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
+#  large-v2   1550 M 	           x 	               yes
+#  large-v3   1550 M 	           x 	               yes
 
 def transcribe(input_data, file_data=None):
     if input_data.startswith("https://www.youtube.com/") or input_data.startswith("http://www.youtube.com/") or input_data.startswith("www.youtube.com/") or input_data.startswith("youtube.com/"):
