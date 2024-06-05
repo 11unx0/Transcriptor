@@ -55,10 +55,10 @@ iface = gr.Interface(
     title="11unx0's Transcriptor.",
     description='''### Enter a YouTube video URL or upload an audio file to transcribe it.
     ### Uses Whisper models by OpenAI.
-    ### Web Page: [https://11unx0.github.io](https://11unx0.github.io)
+    ### Developer's Web Page: [https://11unx0.github.io](https://11unx0.github.io)
     ### Project Page: [https://github.com/11unx0/Transcriptor](https://github.com/11unx0/Transcriptor)''',
     allow_flagging="never",
-    theme=gr.themes.Base()
+    theme='Taithrah/Minimal'
 )
 
 iface.launch()
